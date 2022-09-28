@@ -8,8 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-var username = "admin@gmail.com";
-var password = "Admin@123";
+var username = "testing@gmail.com";
+var password = "Testing@1";
 
 //Post sign
 app.post("/signUp", (req, res) => {
