@@ -1,0 +1,22 @@
+<app-user-header></app-user-header>
+<div class="books">
+  <h1>New collections</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let book of books">
+      <div class="card h-100">
+        <img [src]="book.image" [title]="book.title" />
+        <div class="card-body">
+          <h4 class="card-title">{{ book.title }}</h4>
+          <h6>Author: {{ book.author }}</h6>
+          <h6>Genre: {{ book.genre }}</h6>
+          <h6>Description: {{ book.description }}</h6>
+          <h6>Rating: {{ book.rating }}</h6>
+          <div class="buttons">
+            <button mat-button (click)="updateBook(book)">Update</button>
+            <button mat-button (click)="deleteBook(book)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

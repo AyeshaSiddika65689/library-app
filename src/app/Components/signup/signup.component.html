@@ -1,0 +1,74 @@
+<div class="signup-frm">
+  <form #signDetails="ngForm" (ngSubmit)="SignUp()">
+    <h3>SIGNUP</h3>
+    <div class="mb-3">
+      <input
+        type="text"
+        name="name"
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+        [(ngModel)]="userDetails.name"
+        pattern="^[A-Z][A-Za-z\\s]*$"
+        class="form-control"
+        placeholder="Fullname"
+        required="required"
+      />
+      <small [class.d-none]="name.valid || name.untouched"
+        >*Enter valid Input</small
+      >
+    </div>
+    <div class="mb-3">
+      <input
+        type="email"
+        name="email"
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        [(ngModel)]="userDetails.email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        class="form-control"
+        placeholder="Email"
+        required="required"
+      />
+      <small [class.d-none]="email.valid || email.untouched"
+        >*Enter valid Input</small
+      >
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        name="password"
+        #password="ngModel"
+        [class.is-invalid]="
+          password.invalid && (password.dirty || password.touched)
+        "
+        [(ngModel)]="userDetails.password"
+        class="form-control"
+        placeholder="Password"
+        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+        required="required"
+      />
+      <small [class.d-none]="password.valid || password.untouched"
+        >*Use Strong password</small
+      >
+    </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        name="confirmPassword"
+        #confirmPassword="ngModel"
+        [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched"
+        [(ngModel)]="userDetails.confirmPassword"
+        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+        class="form-control"
+        placeholder="Confirm password"
+        required="required"
+      />
+      <small [class.d-none]="confirmPassword.valid || confirmPassword.untouched"
+        >*Use Strong password</small
+      >
+    </div>
+    <button class="btn" [disabled]="signDetails.invalid" mat-button>
+      SIGNUP
+    </button>
+  </form>
+</div>

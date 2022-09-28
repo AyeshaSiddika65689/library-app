@@ -1,0 +1,10 @@
+.addNew-frm{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.addBtn{
+    background-color: rgb(8, 83, 88);
+    color: white;
+    padding: 0px 40px;
+}

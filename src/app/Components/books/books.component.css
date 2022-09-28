@@ -1,0 +1,36 @@
+.books h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: rgb(18, 76, 80);
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+}
+.card{
+  height: 250px;
+  width: 420px;
+}
+.card img {
+  border-radius: 5px;
+  height: 450px;
+}
+.card h4 {
+  font-weight: 600;
+}
+.card h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  background-color: rgb(8, 83, 88);
+  margin: 5px;
+  color: #fff;
+}

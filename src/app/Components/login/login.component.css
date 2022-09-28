@@ -1,0 +1,28 @@
+.login-frm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    background-color: rgb(6, 97, 97);
+    padding: 60px 100px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  small{
+    color: rgb(207, 5, 5);
+  }
+  .login-frm h3 {
+    font-weight: 600;
+    color: white;
+  }
+  .btn {
+    background-color: rgb(9, 50, 51);
+    color: #fff;
+    padding: 0px 30px;
+  }
+  .btn:hover {
+    color: #fff;
+    background-color: rgb(130, 221, 228);
+  }
+  

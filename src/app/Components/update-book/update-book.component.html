@@ -1,0 +1,25 @@
+<app-user-header></app-user-header>
+<div class="update-frm">
+  <form class="col-lg-5">
+    <h3>Update Book</h3>
+    <div class="mb-3">
+      <input type="text" name="title" class="form-control" [(ngModel)]="bookDetails.title" placeholder="Title" />
+    </div>
+    <div class="mb-3">
+        <input type="text" name="author" class="form-control" [(ngModel)]="bookDetails.author" placeholder="Author" />
+    </div>
+    <div class="mb-3">
+        <input type="text" name="genre" class="form-control" [(ngModel)]="bookDetails.genre" placeholder="Genre" />
+      </div>
+      <div class="mb-3">
+        <textarea name="description" class="form-control" [(ngModel)]="bookDetails.description" placeholder="Description..." rows="6"></textarea>
+      </div>
+      <div class="mb-3">
+        <input type="text" name="rating" class="form-control" [(ngModel)]="bookDetails.rating" placeholder="Rating" />
+      </div>
+      <div class="mb-3">
+        <input type="text" name="image" class="form-control" [(ngModel)]="bookDetails.image" placeholder="Enter image URL" />
+      </div>
+    <button class="updateBtn" mat-button (click)="updateBook()">Update Book</button>
+  </form>
+</div>
